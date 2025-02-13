@@ -28,7 +28,7 @@ export default function Header({ name}: NavbarProps) {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/"
                   className="block py-2 px-3 bg-blue-700 rounded md:bg-transparent md:text-white hover:bg-[#4C3D3D]"
                 >
                   Logout
