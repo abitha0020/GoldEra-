@@ -26,18 +26,9 @@ export default function Citizen() {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
-      <h2 className="font-medium text-4xl mb-8">Citizen Information</h2>
+      <h2 className="font-medium text-5xl mb-8 tracking-wider">Citizen Portal</h2>
+      <h3 className="mb-8 text-yellow-500 text-2xl">Log in to your user account</h3>
       <div className="w-full max-w-md bg-white shadow-lg p-8 rounded-lg">
-        <div className="mb-4">
-          <label className="block mb-2 text-lg">Name:</label>
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            className="border rounded-lg w-full p-3"
-            placeholder="Enter your name"
-          />
-        </div>
         <div className="mb-4">
           <label className="block mb-2 text-lg">Aadhaar ID:</label>
           <input
