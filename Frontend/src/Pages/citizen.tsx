@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
  // Assuming you have a Button component
 
 export default function Citizen() {
-  const [name, setName] = useState("");
   const [aadhaarId, setAadhaarId] = useState("");
   const [otp, setOtp] = useState("");
   const [isOtpSent, setIsOtpSent] = useState(false);
@@ -13,7 +12,7 @@ export default function Citizen() {
 
 
   const handleSubmit = () => {
-    console.log(`Name: ${name}, Aadhaar ID: ${aadhaarId}`);
+    console.log(`Aadhaar ID: ${aadhaarId}`);
     setIsOtpSent(true);
     alert(`OTP sent to Aadhaar ID: ${aadhaarId}`);
   };
