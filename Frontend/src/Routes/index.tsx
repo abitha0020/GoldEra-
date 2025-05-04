@@ -34,7 +34,7 @@ export default function Navigator(){
                     <Route path="/Loan" element={<LoanForm/>}/>
                 </Route>
                 <Route path="/CitizenLogin" element={<Citizen />} />  
-                <Route path="/CitizenHomePage" element={<HUIDListPage name="Jenat" aadhaarId="1234567890" />} /> 
+                <Route path="/CitizenHomePage" element={<HUIDListPage name="Jenat" aadhaarId="900080001234" />} /> 
                 <Route element={<BISLayout />}>
                     <Route path="/BISHome" element={<BISHome />} />
                     <Route path="/FindOwner" element={<FindOwner />} />
