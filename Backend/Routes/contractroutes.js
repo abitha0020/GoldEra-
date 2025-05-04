@@ -306,4 +306,22 @@ router.post('/update-aadhar', async (req, res) => {
     }
 });
 
+// Route to check if a HUID corresponds to an Aadhar
+router.get('/is-huid-corresponding', async (req, res) => {
+    const { aadhar, huid } = req.query;
+
+    if (!aadhar || !huid) {
+        return res.status(400).json({ error: 'Missing required query parameters: aadhar and huid' });
+    }
+
+    try {
+        const result = await contract.isHUIDCorresponding(aadhar, huid);
+        res.status(200).json({ corresponding: result });
+    } catch (error) {
+        console.error('Error checking HUID correspondence:', error.message);
+        res.status(500).json({ error: 'Failed to check HUID correspondence', details: error.message });
+    }
+});
+
+
 module.exports = router;
