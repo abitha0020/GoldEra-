@@ -63,11 +63,11 @@ const HomePage: React.FC = () => {
       {/* About Us Section */}
       <section id="about" className="#FFF7D4 py-16 text-center">
         <h2 className="text-4xl font-bold text-black mb-6">About Us</h2>
-        <p className="text-lg text-gray-700 max-w-3xl mx-auto px-4">
+        <p className="text-lg text-gray-700 max-w-5xl mx-auto px-4 text-justify">
         The lack of a centralized management system for gold, combine with increasing thefts and the cumbersome process of obtaining gold loans, highlights a pressing need for improved transparency and efficiency in gold transactions. There is a growing demand for a standardized solution that can enhance security and streamline the transfer process for gold assets. 
 
 We are proposing a new system for gold exchange in India. The proposed system is an end-to-end digital process anchored on Aadhar. It's a linkage between Aadhar IDs and Hallmark Unique Identification numbers(HUID). 
-The concept involves jewellery owners associating their HUIDs with Aadhar IDs while selling their product, leveraging blockchain technology to ensure the security and immutability of ownership records. This Aadhar-HUID linkage streamlines ownership verification and facilitates transparent and secure transferability of gold assets. When a bank or loan provider needs to verify the ownership and purity of gold item, they access the data associated with the corresponding HUID. This information, allows for a precise assessment of purity. 
+<br/><br/>The concept involves jewellery owners associating their HUIDs with Aadhar IDs while selling their product, leveraging blockchain technology to ensure the security and immutability of ownership records. This Aadhar-HUID linkage streamlines ownership verification and facilitates transparent and secure transferability of gold assets. When a bank or loan provider needs to verify the ownership and purity of gold item, they access the data associated with the corresponding HUID. This information, allows for a precise assessment of purity. 
 With this proposed new system we intend to reduce gold smuggling as aadhar id linkage is needed for further transfer of gold and provide greater transparency , purity assurance , faster gold loan and faster exchange of golds from jewellery. 
 With this project we aim to build a trustworthy and transparent environment or platform for handling one of the most precious materialistic resource known to mankind - The Gold.
         </p>
