@@ -1,6 +1,6 @@
 import { useState } from "react";
-import axios from 'axios'; // Import axios to make HTTP requests
-import Button from "../Components/button"; // Import your button component
+import axios from 'axios'; 
+import Button from "../Components/button"; 
 
 export default function GoldExchangePage() {
   const [name, setName] = useState("");
@@ -10,22 +10,19 @@ export default function GoldExchangePage() {
   const [isOtpSent, setIsOtpSent] = useState(false);
   const [otpSentTo, setOtpSentTo] = useState("");
 
-  // Function to send OTP
+  
   const handleSubmit = () => {
-    // Logic to send OTP based on Aadhar number
     console.log(`Name: ${name}, Aadhar: ${aadhar}, HUID: ${huid}`);
-    setOtpSentTo(aadhar); // Assuming OTP is sent to Aadhar for demo purposes
+    setOtpSentTo(aadhar); 
     setIsOtpSent(true);
     alert(`OTP sent to Aadhar: ${aadhar}`);
   };
 
-  // Function to verify OTP and send API request to remove HUID linkage
+  
   const handleOtpVerification = async () => {
     try {
-      // Logic to verify OTP and remove HUID linkage
       console.log(`Verifying OTP: ${otp} for Aadhar: ${aadhar}`);
 
-      // Call API to remove HUID linkage
       const response = await axios.post('http://localhost:3000/contract/remove-huid', {
         aadhar,
         huid,
@@ -33,6 +30,11 @@ export default function GoldExchangePage() {
 
       console.log('Response:', response.data);
       alert("HUID linkage removed successfully! Transaction hash: " + response.data.txHash);
+      setName("")
+      setAadhar("")
+      setHuid("")
+      setOtp("")
+      setIsOtpSent(false)
     } catch (error) {
       console.error('Error removing HUID:', error);
       alert("Failed to remove HUID. Please try again.");
