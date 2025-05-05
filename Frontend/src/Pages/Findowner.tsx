@@ -19,6 +19,7 @@ export default function FindOwner() {
     } catch (err) {
       console.error('Error fetching Aadhar:', err);
       setError("Failed to fetch Aadhar. Please try again.");
+      console.error('Error fetching Aadhar:', error);
       setAadharResult(null);
       setIsResultVisible(true);
     }
