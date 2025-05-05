@@ -11,7 +11,6 @@ export default function Ownership() {
   const navigate = useNavigate();
   const handleSendOTP = async () => {
     if (!isOtpVisible) {
-      // Call backend API before showing OTP
       try {
         const response = await fetch(`http://localhost:3000/contract/is-huid-corresponding?aadhar=${aadhar}&huid=${huid}`);
         const data = await response.json();

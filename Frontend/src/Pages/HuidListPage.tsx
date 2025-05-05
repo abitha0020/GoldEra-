@@ -21,12 +21,10 @@ export default function HUIDListPage({ name, aadhaarId }: HUIDListPageProps) {
   const [huidList, setHuidList] = useState<HUIDItem[]>([]);
   const [selectedHUID, setSelectedHUID] = useState<string | null>(null);
 
-  // Simulating a backend call to fetch HUIDs for the given Aadhaar ID
   useEffect(() => {
     const fetchHUIDs = () => {
       console.log(`Fetching HUIDs for Aadhaar ID: ${aadhaarId}`);
 
-      // Simulated HUIDs data for the user
       const huids: HUIDItem[] = [
         {
           huid: "HUID123456",

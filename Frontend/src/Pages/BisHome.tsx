@@ -23,7 +23,7 @@ export default function BISHome() {
       { id: "4567384756", name: "DANY JEWELLERY", district: "KOTTAYAM" },
       { id: "3289674586", name: "DAVID JEWELLERY", district: "KANNUR" },
     ],
-    // Add jewellery data for other states if available
+    
   };
 
   const states = [
@@ -63,7 +63,7 @@ export default function BISHome() {
 
   const showState = (stateName: string) => {
     setSelectedState(stateName);
-    setIsDropdownOpen(false); // Close dropdown after selection
+    setIsDropdownOpen(false); 
   };
 
   const renderJewelleryTable = () => {

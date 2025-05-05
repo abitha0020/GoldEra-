@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Button from "../Components/button";
 import { useNavigate } from 'react-router-dom';
- // Assuming you have a Button component
 
 export default function Citizen() {
   const [aadhaarId, setAadhaarId] = useState("");

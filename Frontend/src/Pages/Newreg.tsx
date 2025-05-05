@@ -24,35 +24,31 @@ const NewUserRegistration = () => {
     setFormData({ ...formData, huids: updatedHuids });
   };
 
-  // Add new HUID field
   const addHuidField = () => {
     setFormData({ ...formData, huids: [...formData.huids, ''] });
   };
 
-  // Remove HUID field
   const removeHuidField = (index: number) => {
     const updatedHuids = formData.huids.filter((_, idx) => idx !== index);
     setFormData({ ...formData, huids: updatedHuids });
   };
 
-  // Handle form submission to send OTP
   const handleSendOtp = (e: React.FormEvent) => {
     e.preventDefault();
     setOtpSent(true); 
   };
 
-  // Handle OTP submission and send API request
+ 
   const handleOtpSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     const { aadhaar, huids } = formData;
 
     try {
-      // Make the API request to add HUIDs
       const response = await axios.post('http://localhost:3000/contract/add-huid', {
         aadhar: aadhaar,
         huid: huids,
-        otp: otp, // Include the OTP in the request
+        otp: otp, 
       });
 
       console.log('Form data sent:', response.data);

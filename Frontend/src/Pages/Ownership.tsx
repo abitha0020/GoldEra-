@@ -146,7 +146,7 @@ export default function Ownership() {
                 placeholder="Enter your Aadhar Number"
                 className="w-full px-3 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-[#C07F00]"
                 value={newAadhar}
-                onChange={(e) => setNewAadhar(e.target.value)}  // Update newAadhar state
+                onChange={(e) => setNewAadhar(e.target.value)} 
               />
             </div>
             {isOtpVisible && (

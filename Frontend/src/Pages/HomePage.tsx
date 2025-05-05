@@ -31,7 +31,6 @@ const HomePage: React.FC = () => {
     <div style={{ backgroundColor: '#FFF7D4' }} className="min-h-screen">
       <Navbar />
 
-      {/* Header with logo and title */}
       <div className="flex flex-col items-center justify-center p-11 text-center">
         <img src={logo} alt="Logo" className="w-32 mb-4" />
         <h1 className="text-5xl font-bold text-black">GOLDERA</h1>
@@ -40,7 +39,6 @@ const HomePage: React.FC = () => {
         </h2>
       </div>
 
-      {/* Card Section */}
       <div className="flex items-center justify-center p-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {cards.map((card) => (

@@ -9,7 +9,6 @@ export default function FindOwner() {
 
   const getAadhar = async () => {
     try {
-      // Make an API request to fetch HUIDs based on the Aadhar number
       const response = await axios.get(`http://localhost:3000/contract/get-aadhar/${huid}`);
       
       const aadhar = response.data.aadhar;

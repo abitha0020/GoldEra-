@@ -9,10 +9,8 @@ export default function HUIDListing() {
 
   const getHUIDs = async () => {
     try {
-      // Make an API request to fetch HUIDs based on the Aadhar number
       const response = await axios.get(`http://localhost:3000/contract/get-huids/${aadharNumber}`);
       
-      // Assuming the API returns an object with `huids` array
       const huids = response.data.huids;
       setHUIDResult(`HUIDs for Aadhar ${aadharNumber}: ${huids.join(", ")}`);
       setIsResultVisible(true);
@@ -20,6 +18,7 @@ export default function HUIDListing() {
     } catch (err) {
       console.error('Error fetching HUIDs:', err);
       setError("Failed to fetch HUIDs. Please try again.");
+      console.log(error);
       setHUIDResult(null);
       setIsResultVisible(true);
     }

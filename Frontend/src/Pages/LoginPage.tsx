@@ -33,7 +33,6 @@ export default function LoginPage({ usertype }: LoginPageProps) {
         usertype,
       });
 
-      // Handle success response
       console.log(response.data);
       alert(`Login successful: ${response.data.user.Name}`);
       if (usertype==="Jewellery"){
@@ -44,11 +43,9 @@ export default function LoginPage({ usertype }: LoginPageProps) {
       }
 
     } catch (error) {
-      // Ensure the error is typed as AxiosError
       if (axios.isAxiosError(error)) {
         const axiosError = error as AxiosError<LoginErrorResponse>;
 
-        // Handle the error if there's a response from the server
         if (axiosError.response) {
           alert(`Error: ${axiosError.response.data.error}`);
           console.log('Server Error:', axiosError.response.data.error);
@@ -57,7 +54,6 @@ export default function LoginPage({ usertype }: LoginPageProps) {
           console.log('Network Error:', error);
         }
       } else {
-        // Non-Axios errors (e.g., JavaScript runtime errors)
         console.log('Unexpected Error:', error);
         alert('An unexpected error occurred');
       }
@@ -68,7 +64,6 @@ export default function LoginPage({ usertype }: LoginPageProps) {
 
   return (
     <div className="flex h-screen">
-      {/* Left section: Login form */}
       <div className="bg-[#FFF7D4] w-1/2 h-full flex flex-col justify-center">
         <h2 className="font-medium text-5xl text-center">
           Login To Your {usertype === 'Jewellery' ? 'Jewellery' : 'Bank'} Portal
@@ -102,7 +97,6 @@ export default function LoginPage({ usertype }: LoginPageProps) {
         </div>
       </div>
 
-      {/* Right section: Conditionally rendered image */}
       <div className="w-1/2 h-full">
         <img src={loginImage} alt="Login" className="object-cover w-full h-full" />
       </div>
