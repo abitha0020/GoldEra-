@@ -129,7 +129,7 @@ export default function BISHome() {
           )}
         </div>
 
-        <a href="owner.html">
+        <a >
           <button
             type="submit"
             className="bg-yellow-600 text-white font-bold py-2 px-6 rounded-lg shadow-lg hover:bg-yellow-700"
