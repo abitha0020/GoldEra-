@@ -8,6 +8,9 @@ export default function Ownership() {
   
   const [newAadhar, setNewAadhar] = useState("");
   const [huid, setHuid] = useState("");
+  const [odAadhar, setOdAadhar] = useState("");
+  const [ownerName, setOwnerName] = useState("");
+  const [newOwnerName, setNewOwner] = useState("");
 
   const handleSendOTP = () => {
     console.log("OTP has been sent");
@@ -29,6 +32,13 @@ export default function Ownership() {
         console.log("Aadhar updated successfully:", response.data);
         alert('Aadhar updated successfully');
       }
+      setNewAadhar("");
+      setHuid("");
+      setIsOtpVisible(false);
+      setButtonText("Send OTP");
+      setNewOwner("")
+      setOdAadhar("")
+      setOwnerName("")
     } catch (error) {
       console.error("Error updating Aadhar:");
       alert('error');
@@ -49,6 +59,8 @@ export default function Ownership() {
               <input
                 type="text"
                 placeholder="Enter your Name"
+                value={ownerName}
+                onChange={(e) => setOwnerName(e.target.value)}
                 className="w-full px-3 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-[#C07F00]"
               />
             </div>
@@ -59,6 +71,8 @@ export default function Ownership() {
               <input
                 type="text"
                 placeholder="Enter your Aadhar Number"
+                value={odAadhar}
+                onChange={(e) => setOdAadhar(e.target.value)}
                 className="w-full px-3 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-[#C07F00]"
               />
             </div>
@@ -118,6 +132,8 @@ export default function Ownership() {
               <input
                 type="text"
                 placeholder="Enter your Name"
+                value={newOwnerName}
+                onChange={(e) => setNewOwner(e.target.value)}
                 className="w-full px-3 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-[#C07F00]"
               />
             </div>
