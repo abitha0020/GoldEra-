@@ -14,6 +14,7 @@ export default function GoldExchangePage() {
   const handleSubmit = () => {
     console.log(`Name: ${name}, Aadhar: ${aadhar}, HUID: ${huid}`);
     setOtpSentTo(aadhar); 
+    console.log("Otp send to",otpSentTo)
     setIsOtpSent(true);
     alert(`OTP sent to Aadhar: ${aadhar}`);
   };
