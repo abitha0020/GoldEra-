@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 const BISLayout = () => {
     return (
         <div>
-            <Header name="BIS"/>
+            <Header name="BIS" homeLink="/BISHome"/>
             <Outlet /> 
         </div>
     );
