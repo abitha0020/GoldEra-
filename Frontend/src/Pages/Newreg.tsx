@@ -61,6 +61,15 @@ const NewUserRegistration = () => {
       console.error('Error submitting form:', error);
       alert('Error adding HUIDs.');
     }
+    finally{
+      setFormData({
+        name: '',
+        aadhaar: '',
+        huids: [''],
+      });
+      setOtp('');
+      setOtpSent(false);
+    }
   };
 
   return (
